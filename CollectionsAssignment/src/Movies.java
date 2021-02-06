@@ -83,6 +83,8 @@ public class Movies implements Comparable<Movies> {
     }
 }
 
+
+
 class sortByMoviesDirector implements Comparator<Movies> {
     @Override
     public int compare(Movies o1, Movies o2) {
@@ -104,20 +106,6 @@ class sortByMoviesDuration implements Comparator<Movies> {
             return 0;
         }
 
-    }
-}
-
-class sortByMoviesReleaseDate implements Comparator<Movies> {
-    @Override
-    public int compare(Movies o1, Movies o2) {
-        return o1.getReleaseDate().compareTo(o2.getReleaseDate());
-    }
-}
-
-class sortByMoviesLanguage implements Comparator<Movies> {
-    @Override
-    public int compare(Movies o1, Movies o2) {
-        return o1.getLanguage().compareTo(o2.getLanguage());
     }
 }
 

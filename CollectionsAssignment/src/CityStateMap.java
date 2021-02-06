@@ -13,6 +13,7 @@ public class CityStateMap {
         csMap.addCityStatePair("Allahabad", "Uttar Pradesh");
 
         System.out.println(csMap.getAllCities());
+        System.out.println(csMap.getAllStates());
     }
 
     void addCityStatePair(String city, String state) {
@@ -28,4 +29,15 @@ public class CityStateMap {
 
         return allCities;
     }
+
+    ArrayList<String> getAllStates() {
+        ArrayList<String> allStates = new ArrayList<>();
+
+        for(Map.Entry<String, String> x : this.cityStateMap.entrySet()) {
+            allStates.add(x.getValue());
+        }
+
+        return allStates;
+    }
+
 }
